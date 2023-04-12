@@ -1,0 +1,5 @@
+# AutoConfigurationImportFilter
+org.springframework.boot.autoconfigure.AutoConfigurationImportFilter=com.hzk.boot.autoconfigure.MyAutoConfigurationImportFilter
+
+
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.hzk.config.AppConfig

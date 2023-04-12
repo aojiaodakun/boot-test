@@ -1,0 +1,29 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: boot-test
+  cloud:
+    zookeeper:
+      connect-string: localhost:2181
+      discovery:
+        root: /hzk-services
+    nacos:
+      discovery:
+        serverAddr: localhost:8848
+        username: nacos
+        password: nacos12
+  datasource:
+    # 当前数据源操作类型
+    type: com.alibaba.druid.pool.DruidDataSource
+    # mysql驱动类
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/seata_order?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: root
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka
